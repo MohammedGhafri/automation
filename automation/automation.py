@@ -10,12 +10,12 @@ def collection():
         # match = re.search(r'([\w.-]+)@([\w.-]+)', str)
         file=file.read()
         find_email=re.findall(reg_email,file)
-        find_phone_num=re.findall(reg_phone,file)
+        find_phone_num=re.fu(reg_phone,file)
         # print(find_email,len(find_email))
-        # print(find_phone_num)
+        print(find_phone_num)
     with open('assets/email.csv','w+') as file:
         file.write(str(find_email))
-    print(find_email)
+    # print(find_email)
     
 
 collection()
